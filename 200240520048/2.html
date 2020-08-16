@@ -1,0 +1,50 @@
+<!-- Create a Simple Form with Username, Password and Email Field and perform following
+DOM Operations
+a. Empty validation for all the fields.
+b. Read the value of the above fields and display it in the page, below the forms.
+c. Clear the fields once the user submit the form. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <script src="2.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="card card-body d-flex justify-content-center align-items-center">
+
+                <div class="form-group col-5">
+                    <lable>username</lable>
+                    <input id="uname" type="text" name="username" class="form-control " onkeypress="getuser()">
+                </div>
+                <div class="form-group col-5">
+                    <lable>Password</lable>
+                    <input id="pword" type="password" name="password" class="form-control">
+                </div>
+                <div class="form-group col-5">
+                    <lable>email</lable>
+                    <input id="mail" type="email" name="email" class="form-control">
+                </div>
+                <button type="button" class="btn btn-primary col-2" onclick="check()">submit</button>
+        </form>
+        <div id="error" style="visibility: hidden;">error</div>
+        <div id="info" style="visibility: hidden;">
+            username :<span id="name">uname</span></br>
+            password :<span id="pw">pass</span></br>
+            Email :<span id="em">email</span>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
